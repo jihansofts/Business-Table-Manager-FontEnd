@@ -3,7 +3,8 @@ import store from "../redux/store/store";
 import { ShowLoader, HideLoader } from "../redux/state-slice/settingSlice";
 import { ErrorToast } from "../helper/FormHelper";
 import { SetAllProduct, SetTotal } from "../redux/state-slice/productSlice";
-const baseURL = "http://localhost:5500/api/v1";
+// const baseURL = "http://localhost:5500/api/v1";
+const baseURL = "https://business-table-manager-backend.onrender.com/api/v1";
 export async function GetProductList(pageNo, perPage, searcKey) {
   store.dispatch(ShowLoader());
   let URL = baseURL + "/ProductList/" + pageNo + "/" + perPage + "/" + searcKey;
